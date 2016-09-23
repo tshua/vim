@@ -1,9 +1,11 @@
 set tags+=~/.vim/tags/cpp_src/tags " 设置tags搜索路径
 set wildmode=longest,list " Ex命令自动补全采用bash方式"
+set nu
 syntax on
 filetype plugin indent on
 
-map <C-n> :NERDTree<CR>
+map <C-l> :NERDTree<CR>
+map <C-k> :TlistToggle<CR>
 
 " pathongen
 execute pathogen#infect()
@@ -20,3 +22,5 @@ let OmniCpp_NamespaceSearch = 2 " search namespaces in the current buffer and in
 let OmniCpp_ShowPrototypeInAbbr = 1 " 显示函数参数列表
 let OmniCpp_MayCompleteScope = 1 " 输入 :: 后自动补全
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]"]"
+
+hi Constant ctermfg =darkblue 
